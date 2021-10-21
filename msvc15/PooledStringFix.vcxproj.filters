@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="libudis86">
+      <UniqueIdentifier>{ffa5e277-1d42-445a-a087-36f2079cc1c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CDetour">
+      <UniqueIdentifier>{ba353ff9-d76e-4492-ac4e-0ac80ad89449}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ASM">
+      <UniqueIdentifier>{a56dee0c-e8d4-471d-89df-3874855c26d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="SM SDK">
+      <UniqueIdentifier>{31958233-BB2D-4e41-A8F9-CE8A4684F436}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\extension.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Extension\sourcemod\sourcemod-1.10\public\smsdk_ext.cpp">
+      <Filter>SM SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libudis86\itab.c">
+      <Filter>libudis86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libudis86\decode.c">
+      <Filter>libudis86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libudis86\udis86.c">
+      <Filter>libudis86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libudis86\syn-intel.c">
+      <Filter>libudis86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libudis86\syn-att.c">
+      <Filter>libudis86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libudis86\syn.c">
+      <Filter>libudis86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CDetour\detours.cpp">
+      <Filter>CDetour</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Extension\sourcemod\sourcemod-1.10\public\asm\asm.c">
+      <Filter>ASM</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\smsdk_config.h">
+      <Filter>SM SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Extension\sourcemod\sourcemod-1.10\public\smsdk_ext.h">
+      <Filter>SM SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libudis86\itab.h">
+      <Filter>libudis86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libudis86\extern.h">
+      <Filter>libudis86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libudis86\decode.h">
+      <Filter>libudis86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libudis86\udis86.h">
+      <Filter>libudis86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libudis86\udint.h">
+      <Filter>libudis86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libudis86\types.h">
+      <Filter>libudis86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libudis86\syn.h">
+      <Filter>libudis86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CDetour\detours.h">
+      <Filter>CDetour</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CDetour\detourhelpers.h">
+      <Filter>CDetour</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Extension\sourcemod\sourcemod-1.10\public\asm\asm.h">
+      <Filter>ASM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extension.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chandle.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,95 @@
+"Games"
+{
+    "csgo"
+    {
+        "Signatures"
+        {
+            "DoEntFireByInstanceHandle"
+            {
+                "library" "server"
+
+                // __stdcall
+                "windows" "\x55\x8B\xEC\x83\xEC\x18\x8B\x45\x0C\x53\x33\xDB" //Ghidra "\x55\x8B\xEC\x83\xEC\x18\x8B\x45\x2A\x53\x33\xDB\x56"
+                // __cdecl
+                "linux" "\x55\x89\xE5\x57\x56\x53\xBB\x2A\x2A\x2A\x2A\x83\xEC\x6C\x8B\x55\x0C"
+            }
+
+            "DoEntFire"
+            {
+                "library" "server"
+
+                // __stdcall
+                "windows" "\x55\x8B\xEC\x83\xEC\x18\x8B\x45\x08\x53\x33\xDB"  // Ghidra "\x55\x8B\xEC\x83\xEC\x18\x8B\x45\x2A\x53\x33\xDB\x89\x5D\x2A"
+                // __cdecl
+                "linux" "\x55\x89\xE5\x57\x56\x8D\x7D\xC4\x53\x83\xEC\x6C\x8B\x45\x08\x89\x3C\x24"
+            }
+
+            "AllocPooledString"
+            {
+                "library" "server"
+
+                // __fastcall Ghidra
+                //"windows" "\x55\x8B\xEC\x83\xEC\x0C\x8D\x45\x2A\x57"
+                // __cdecl Ghidra
+                //"linux" "\x55\x89\xE5\x53\x83\xEC\x14\x8B\x45\x2A\x8B\x5D\x2A\x85\xC0\x74\x2A\x80\x38\x00"
+
+                // __thiscall - IDA
+                "windows" "\x55\x8B\xEC\x83\xEC\x0C\x8D\x45\x08"
+                // __userpurge - IDA
+                "linux" "\x55\x89\xE5\x53\x83\xEC\x14\x8B\x45\x0C\x8B\x5D\x08\x85\xC0\x74\x2A\x80\x38\x00"
+            }
+
+            "RemovePooledString"
+            {
+                "library" "server"
+
+                // __stdcall
+                //"windows" "\x55\x8B\xEC\x56\x8D\x45\x2A" // Ghidra
+                "windows" "\x55\x8B\xEC\x56\x8D\x45\x08"
+                // __cdecl
+                "linux" "\x55\x89\xE5\x83\xEC\x48\x8B\x45\x08\x89\x5D\xF4\x89\x75\xF8\x89\x7D\xFC\xC7\x04\x24\x2A\x2A\x2A\x2A"
+            }
+
+            "CGameText::SetText"
+            {
+                "library" "server"
+
+                // __thiscall
+                "windows" "\x55\x8B\xEC\x56\x8B\xF1\x8B\x4D\x2A\x83\xC1\x08\x83\x79\x2A\x02\x75\x2A\x8B\x01\x85\xC0\x75\x2A\xC7\x86\x2A\x2A\x2A\x2A\x00\x00\x00\x00\x5E\x5D\xC2\x04\x00\xE8\x2A\x2A\x2A\x2A\x85\xC0\x74\x2A\x80\x38\x00\x74\x2A\x50"
+            
+                // !! WILD GUESS !!
+                "linux" "\x55\x89\xE5\x83\xEC\x28\x8B\x45\x2A\x83\x78\x2A\x02"
+            }
+
+            "CBaseEntity::KeyValue"
+            {
+                "library" "server"
+
+                // __thiscall
+                "windows" "\x55\x8B\xEC\x83\xE4\xC0\x83\xEC\x34\x53\x56\x8B\x75\x2A\x57"
+                // __cdecl
+                "linux" "\x55\x89\xE5\x57\x56\x53\x83\xEC\x6C\x8B\x5D\x0C\xC7\x44\x24\x04\x23\x00\x00\x00"
+            }
+
+            "CEventAction::CEventAction"
+            {
+                "library" "server"
+
+                // __thiscall
+                "windows" "\x55\x8B\xEC\xA1\x2A\x2A\x2A\x2A\x81\xEC\x00\x01\x00\x00"
+                // __cdecl
+                "linux" "\x55\x89\xE5\x57\x56\x53\x81\xEC\x3C\x01\x00\x00\xA1\x2A\x2A\x2A\x2A\x8B\x7D\x2A"
+            }
+
+            "CCSGameRules::CleanUpMap"
+            {
+                "library" "server"
+
+                // __thiscall
+                "windows" "\x55\x8B\xEC\x83\xEC\x14\x8B\xC1\x53"
+                // __cdecl
+                "linux" "\x55\x89\xE5\x57\x56\x53\x83\xEC\x3C\x8B\x45\x08\x80\xB8\x91\x02\x00\x00\x00"
+            }
+        }
+    }
+}
